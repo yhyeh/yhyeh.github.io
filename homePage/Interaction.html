@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interaciton</title>
+  <!-- Latest compiled and minified CSS -->
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+  <!-- jQuery library -->
+  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="frame_body">
+  <ul class="frame_nav">
+    <li><a href="#WhatToEat">What To Eat</a></li>
+    <!--li><a href="#hw required">HW Required</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#info">Info</a></li-->
+  </ul>
+  <div class="title">
+    <h1>Interaciton</h1>
+  </div>
+  <div class="section" id="WhatToEat">
+    <h2 id="haha">What To Eat</h2>
+    <h4>同學，你有什麼障礙 ? 請排序你困擾你的因素，並說明限制</h4>
+    <script>
+      obstacles = new Array();
+      obstacles[0] = ["請先設定障礙"]
+      obstacles[1] = ["超缺錢","想省錢","正常吃","微奢侈","超奢侈"];
+      obstacles[2] = ["不太餓","餓了","超餓"];
+      obstacles[3] = ["減肥中QQ","增肥中ㄏㄏ"];
+      obstacles[4] = ["超熱","熱","舒適","冷"];
+      obstacles[5] = ["垃圾級","均衡一下","養生級"];
+      obstacles[6] = ["酸","甜","苦","辣","鹹"];
+
+      function renew(formId,index){
+      	var o;
+        /*document.getElementById("haha").innerText = "123456";*/
+        if(formId == "order1"){
+          o = document.getElementById("limit1");
+        }
+        else if(formId == "order2"){
+          o = document.getElementById("limit2");
+        }
+        else if(formId == "order3"){
+          o = document.getElementById("limit3");
+        }
+
+      	for(var i = 0;i < obstacles[index].length;i++)
+      		o.options[i]=new Option(obstacles[index][i], obstacles[index][i]);	// 設定新選項
+      	o.length=obstacles[index].length;	// 刪除多餘的選項
+      }
+    </script>
+    <form id="order1">
+      最最障礙 →
+      <select size="1" onChange="renew(this.form.id,this.selectedIndex);">
+          <option value="obstacle" selected="selected">障礙物</option>
+          <option value="money">錢錢</option>
+          <option value="hunger">飢餓感</option>
+          <option value="calorie">熱量</option>
+          <option value="weather">天氣</option>
+          <option value="health">健康</option>
+          <option value="flavor">特別想吃的味道</option>
+      </select>
+      → 你的狀況 →
+      <select id="limit1" size="1">
+      	<option value="">請先設定障礙
+      </select>
+    </form>
+    <form id="order2">
+      第二障礙 →
+      <select size="1" onChange="renew(this.form.id,this.selectedIndex);">
+          <option value="obstacle" selected="selected">障礙物</option>
+          <option value="money">錢錢</option>
+          <option value="hunger">飢餓感</option>
+          <option value="calorie">熱量</option>
+          <option value="weather">天氣</option>
+          <option value="health">健康</option>
+          <option value="flavor">特別想吃的味道</option>
+      </select>
+      → 你的狀況 →
+      <select id="limit2" size="1">
+      	<option value="">請先設定障礙
+      </select>
+    </form>
+    <form id="order3">
+      第三障礙 →
+      <select size="1" onChange="renew(this.form.id,this.selectedIndex);">
+          <option value="obstacle" selected="selected">障礙物</option>
+          <option value="money">錢錢</option>
+          <option value="hunger">飢餓感</option>
+          <option value="calorie">熱量</option>
+          <option value="weather">天氣</option>
+          <option value="health">健康</option>
+          <option value="flavor">特別想吃的味道</option>
+      </select>
+      → 你的狀況 →
+      <select id="limit3" size="1">
+      	<option value="">請先設定障礙
+      </select>
+    </form>
+
+  </div>
+
+  <!-- Latest compiled JavaScript -->
+  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
+</body>
+</html>
