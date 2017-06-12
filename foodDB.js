@@ -1,6 +1,6 @@
 //////JSON Format//////
-foods =[
-	//somethimg spicy
+var foods =[
+	//something spicy
 	{
 		mName:"八方 酸辣湯餃", 
 		mProperty:[0,2,1,-1,3,-1,[0,3,4]],
@@ -11,14 +11,14 @@ foods =[
 		mProperty:[0,2,0,-1,3,0,[3,4]],
 		mWeight:0
 	},
-	//somthing cheap
+	//something cheap
 	{
 		mName:"二餐三樓",
 		mProperty:[0,0,2,-1,-1,1,[0,2,3,4]],
 		mWeight:0
 	},
 	{
-		mName:"八方 鍋貼or水餃<br>10顆以內", 
+		mName:"八方 鍋貼or水餃 10顆以內", 
 		mProperty:[0,1,0,-1,2,1,[3,4]],
 		mWeight:0
 	},
@@ -28,19 +28,19 @@ foods =[
 		mWeight:0
 	},
 	{
-		mName:"二餐一樓 自助餐<br>四菜無主菜",
+		mName:"二餐一樓 自助餐 四菜無主菜",
 		mProperty:[0,1,1,-1,-1,1,[4]],
 		mWeight:0
 	},
-	//somthing cold
+	//something cold
 	{
-		mName:"7-11 涼麵",
+		mName:"超商 涼麵",
 		mProperty:[0,1,0,-1,1,-1,[4]],
 		mWeight:0
 	},
 	{
-		mName:"",
-		mProperty:[0,1,0,-1,1,-1,[4]],
+		mName:"超商 冰",
+		mProperty:[0,2,0,-1,0,0,[1]],
 		mWeight:0
 	},
 	//something hot
@@ -70,11 +70,11 @@ foods =[
 		mWeight:0
 	},
 	{
-		mName:"7-11 花雕雞麵",
+		mName:"超商 花雕雞麵",
 		mProperty:[0,1,1,1,3,0,[4]],
 		mWeight:0
 	},
-	//somethig a little bit expensive
+	//something a little bit expensive
 	{
 		mName:"多多 義大利麵",
 		mProperty:[0,3,1,-1,-1,-1,[4]],
@@ -86,11 +86,11 @@ foods =[
 		mWeight:0
 	},
 	{
-		mName:"八方 鍋貼or水餃<br>10顆以上", 
+		mName:"八方 鍋貼or水餃 10顆以上", 
 		mProperty:[0,2,0,-1,2,1,[3,4]],
 		mWeight:0
 	},
-	//somthing luxurious
+	//something luxurious
 	{
 		mName:"Nola(Lala?)",
 		mProperty:[0,4,-1,1,-1,-1,[1,4]],
@@ -103,20 +103,19 @@ foods =[
 	},
 	//something large
 	{
-		mName:"茗松 麵食<br>加餛飩 加貢丸 加麵 加榨菜肉絲",
+		mName:"茗松 麵食 加餛飩 加貢丸 加麵 加榨菜肉絲",
 		mProperty:[0,3,2,-1,-1,-1,[4]],
 		mWeight:0
 	},
 	{
-		mName:"茗松 蓋飯系列<br>加飯",
+		mName:"茗松 蓋飯系列 加飯",
 		mProperty:[0,2,2,1,-1,1,[4]],
 		mWeight:0
 	},
-	{
 	//something healthy
 	{
-		mName:"7-11 生菜沙拉",
-		mProperty:[0,2,0,0,1,2,[0,4]],
+		mName:"超商 和風生菜沙拉",
+		mProperty:[0,2,0,0,0,2,[0,4]],
 		mWeight:0
 	},
 	{
@@ -164,6 +163,22 @@ foods =[
 	{
 		mName:"ComeBuy",
 		mProperty:[0,2,-1,1,0,0,[1]],
+		mWeight:0
+	},
+	//something normal
+	{
+		mName:"茗松 蛋包飯",
+		mProperty:[0,2,1,-1,2,1,[4]],
+		mWeight:0
+	},
+	{
+		mName:"和風風味屋 蛋包飯",
+		mProperty:[0,2,1,-1,2,1,[4]],
+		mWeight:0
+	},
+	{
+		mName:"茗松 烤雞or烤豬or烤腿",
+		mProperty:[0,2,1,-1,2,1,[4]],
 		mWeight:0
 	},
 	/*,

@@ -4,10 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Interaction</title>
-  <!-- Latest compiled and minified CSS -->
-  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
-  <!-- jQuery library -->
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script-->
   <link rel="stylesheet" href="style.css">
   <script src="formControl.js"></script>
   <script src="foodDB.js"></script>
@@ -15,9 +11,6 @@
 <body class="frame_body">
   <ul class="frame_nav">
     <li><a href="#WhatToEat">What To Eat</a></li>
-    <!--li><a href="#hw required">HW Required</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#info">Info</a></li-->
   </ul>
   <div class="title">
     <h1>Interaction</h1>
@@ -75,11 +68,9 @@
     </form>
 	<button type="button" id="recommand" class="disclickable" onclick="showResult(false);btnEnable()" disabled>求推薦 ! </button>
 	<button type="button" id="notsatisfied" class="disclickable" onclick="showResult(true)" disabled>不滿意 Orz </button>
+	<button type="button" id="refill" class="disclickable" onclick="location.reload()" disabled>重新設定</button>
 	<div id="result">
 	</div>
   </div>
-
-  <!-- Latest compiled JavaScript -->
-  <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script-->
 </body>
 </html>

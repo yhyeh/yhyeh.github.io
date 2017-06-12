@@ -28,8 +28,16 @@ function renew(formId,index){ //renew limit option according to obstacles
 function btnEnable(){ // foolproof feature for submit button
 	document.getElementById("notsatisfied").disabled = false;
 	document.getElementById("recommand").disabled = true;
+	document.getElementById("refill").disabled = false;
 	document.getElementById("notsatisfied").className = "clickable";
 	document.getElementById("recommand").className = "disclickable";
+	document.getElementById("refill").className = "clickable";
+	var temp=["condition1","condition2","condition3","limit1","limit2","limit3"];
+	for(var i = 0;i < 6;i++){
+		document.getElementById(temp[i]).disabled = true;
+		document.getElementById(temp[i]).style.backgroundColor = "#BBBBBB";
+		document.getElementById(temp[i]).style.color = "#888888";
+	}
 }
 
 function checkObs(){ //At least choose one obstacle, or the button will be disabled
@@ -42,6 +50,8 @@ function checkObs(){ //At least choose one obstacle, or the button will be disab
 		document.getElementById("recommand").className = "disclickable";
 		document.getElementById("notsatisfied").disabled = true;
 		document.getElementById("notsatisfied").className = "disclickable";
+		document.getElementById("refill").disabled = true;
+		document.getElementById("refill").className = "disclickable";
 		document.getElementById("result").style.visibility = "hidden";
 	}
 }
@@ -64,7 +74,7 @@ function showResult(){ //determine which food will be recommanded by system and 
 			for(var j = 0;j < cdt.length;j++){
 				if(cdt[j] == 0)
 					continue;
-				if(cdt[j] != 6){
+				if(cdt[j] != 6){//其他
 					if(foods[i].mProperty[cdt[j]] == lmt[j]){
 						foods[i].mWeight += (cdt.length-j);
 					}
@@ -72,7 +82,7 @@ function showResult(){ //determine which food will be recommanded by system and 
 						foods[i].mWeight -= 1;
 					}
 				}
-				else{
+				else{//特別想吃的味道
 					for(var k = 0;k < foods[i].mProperty[6].length;k++)
 						if(foods[i].mProperty[6][k] == lmt[j])
 							foods[i].mWeight += (cdt.length-j);
@@ -81,12 +91,10 @@ function showResult(){ //determine which food will be recommanded by system and 
 		}
 		foods.sort(function(a,b){return b.mWeight - a.mWeight});
 	}
-	if(repeatTimes >= foods.length){
-		window.alert("沒東西可以吃啦 QQ");
+	if(repeatTimes >= 3/*foods.length*/){
+		window.alert("不可以挑食ㄛˊˇˋ");
 		location.reload();
 		return;
 	}
 	document.getElementById("result").innerHTML = "障礙排除 ※ " + foods[repeatTimes].mName;
 }
-
-console.log(JSON.stringify(foods));
