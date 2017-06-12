@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YehYuHsuan</title>
+  <link rel="stylesheet" href="style.css">
+  <script language="javascript">
+    var btn=new Array();
+    btn[0] = document.getElementById("btn0");
+    btn[1] = document.getElementById("btn1");
+    btn[2] = document.getElementById("btn2");
+    btn[3] = document.getElementById("btn3");
+    for(var i=0 ; i<4 ; i++)
+      btn[i].onclick = show_frame(btn[i]);
+    function show_frame(btn){
+      var frame = document.getElementById("div_of_iframe");
+      frame.style.visibility="";
+      btn.style.borderColor="rgb(250, 250, 210)";
+    }
+  </script>
+</head>
+<body>
+  <header>
+      <h1>YehYuHsuan × NCTU EECS</h1>
+      <h3 style="text-align:right">「 長大難道是人必經的潰爛 ? 」
+        <span> —— 五月天 &lt 盛夏光年 &gt</span>
+      </h3>
+  </header>
+  <div id="medium">
+    <!--left navigator-->
+    <div class="navigator" id="left_nav">
+      <div class="button" id="btn0">
+        <a href="AboutMe.html" target="frame_content">
+          <img src="about_me_btn.jpg">
+        </a>
+          <div class="desc">About Me</div>
+      </div>
+      <div class="button" id="btn1">
+        <a href="LifeJournal.html" target="frame_content">
+          <img src="life_journal_btn.jpg">
+        </a>
+        <div class="desc">Life Journal</div>
+      </div>
+    </div>
+
+    <!--right navigator-->
+    <div class="navigator" id="right_nav">
+      <div class="button" id="btn2">
+        <a href="Works.html" target="frame_content">
+          <img src="works_btn.jpg">
+        </a>
+        <div class="desc">Works</div>
+      </div>
+      <div class="button" id="btn3">
+        <a href="Intereaction.html" target="frame_content">
+          <img src="intereaction_btn.jpg">
+        </a>
+        <div class="desc">Intereaction</div>
+      </div>
+    </div>
+    <!--center content-->
+    <div id="div_of_iframe">
+      <iframe name="frame_content" frameborder="0">
+      </iframe>
+    </div>
+  </div>
+  <footer>
+    <hr>
+    2017 YehYuHsuan &copy All right reserved.
+  </footer>
+</body>
+</html>
